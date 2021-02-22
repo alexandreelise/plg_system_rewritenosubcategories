@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="system" method="upgrade">
+	<name>plg_system_rewritenosubcategories</name>
+	<author>Alexandre ELISÉ</author>
+	<creationDate>2021-02-16</creationDate>
+	<copyright>Copyright (C) 2009-2021 . Alexandre ELISÉ. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>contact@alexandre-elise.fr</authorEmail>
+	<authorUrl>https://coderparlerpartager.fr</authorUrl>
+	<version>0.1.0</version>
+	<description>System plugin to rewrite and ignore subcategories in url and keep parent category and article alias.
+	</description>
+	<files>
+		<filename plugin="rewritenosubcategories">rewritenosubcategories.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="parent_category_id"
+					   type="category"
+					   label="Select a category"
+					   description="Choose parent category"
+					   extension="com_content"
+					   show_root="true"
+					   published="1"
+					   multiple="false"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
